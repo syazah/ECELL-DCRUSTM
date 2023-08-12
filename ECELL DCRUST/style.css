@@ -1,0 +1,409 @@
+@import url('https://fonts.cdnfonts.com/css/impact');
+@import url('https://fonts.cdnfonts.com/css/montreal');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #3D77EB;
+}
+/*NAVBAR*/
+.navbar{
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vh 2vw;
+    z-index: 9999999;
+}
+.logo{
+    display: flex;
+    gap: 1.1vw;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logo img{
+    width: 80px;
+    height: 40px;
+}
+.navbar-nav{
+    display: flex;
+    gap: 2vw;
+}
+.nav-items{
+    list-style: none;
+}
+.nav-items a{
+    text-decoration: none;
+    font-family: 'Montreal';
+    font-size: 1.4vw;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+}
+.nav-items a:hover{
+    background-color: #2e5ab3;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.menu-bar i{
+    font-size: 2vw;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.murthalNav a{
+    text-decoration: none;
+    font-family: 'Montreal';
+    font-size: 1.4vw;
+    font-weight: 700;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .navbar-nav{
+        display: none;
+    }
+    .navbar-nav-active{
+        display: flex;
+        width: 100vw;
+        position: absolute;
+        right: 0;
+        background-color: black;
+        top: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+}
+    .nav-items a{
+        font-size: 15px;
+}
+    .menu-bar i{
+        display: block;
+        font-size: 20px;
+    }
+    .murthalNav a{
+        font-size: 20px;
+    }
+}
+
+
+/*PAGE-1*/
+/*TEXT HEAD*/
+.page-1{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 9vw;
+}
+.page-1 h1{
+    font-family: 'Impact';
+    font-weight: 700;
+    font-size: 12vw;
+    color: white;
+}
+/*VIDEO PARA*/
+.vid-para{
+    margin-top: 4vh;
+    display: flex;
+    width: 100%;
+    gap: 2vw;
+}
+.vid-para p{
+    color: white;
+    font-family: "Montreal";
+    font-size: 1.5vw;
+    font-weight: 700;
+    width: 40%;
+}
+.vid-para video{
+    width: 40%;
+}
+
+@media (max-width:500px){
+    .vid-para{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .vid-para p{
+        font-size: 3vw;
+        width: 100%;
+    }
+    .vid-para video{
+        width: 100%;
+    }
+}
+
+/*PAGE 2*/
+.page-2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 9vw;
+    margin-top: 30vh;
+}
+.page-2 h1{
+    font-family: "Impact";
+    font-weight: 700;
+    font-size: 10vw;
+    color: #3D77EB;
+}
+.pic-para{
+    margin-top: 7vh;
+    display: flex;
+    width: 100%;
+    gap: 0.5vw;
+}
+.pic-para p{
+    width: 40%;
+    color: #3D77EB;
+    font-family: "Montreal";
+    font-weight: 700;
+    font-size: 1.25vw;
+    margin-top: 20px;
+}
+.pic-para-img{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: center;
+}
+.pic-para-img img{
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+@media (max-width: 500px){
+    .pic-para{
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .pic-para-img{
+        width: 100%;
+        align-items: center;
+        order: 2;
+    }
+    .pic-para-img img{
+        width: 40%;
+        height: 50%;
+        z-index: 1;
+    }
+    .pic-para p{
+        width: 100%;
+        color: #3D77EB;
+        font-family: "Montreal";
+        font-size: 3vw;
+    }
+}
+
+/*PAGE 3*/
+.page-3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 9vw;
+    margin-top: 10vh;
+
+}
+.page-3 h1{
+    font-family: "Impact";
+    font-weight: 700;
+    font-size: 10vw;
+    color: #3D77EB;
+}
+
+.page-3-cards{
+    width: 100%;
+    display: flex;
+    margin-top: 8vh;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+}
+.card1{
+    cursor: pointer;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+    margin-top: 4vh;
+    background: url("https://images.pexels.com/photos/3265994/pexels-photo-3265994.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -ms-transition: all 2s linear;
+    -o-transition: all 2s linear;
+}
+.card1 h3{
+    display: none;
+    
+}
+.card2{
+    cursor: pointer;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+    margin-top: 4vh;
+    background: url("https://images.pexels.com/photos/13169782/pexels-photo-13169782.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card2 h3{
+    display: none;
+}
+.card3{
+    cursor: pointer;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+    margin-top: 4vh;
+    background: url("https://images.pexels.com/photos/2339438/pexels-photo-2339438.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card3 h3{
+    display: none;
+}
+
+.card1:hover h3{
+    display: block;
+    font-family: "Impact";
+    color: white;
+    font-size: 4vw;
+    mix-blend-mode: difference;
+    font-weight: 100;
+}
+
+.card2:hover h3{
+    display: block;
+    font-family: "Impact";
+    color: white;
+    font-size: 4vw;
+    mix-blend-mode: difference;
+    font-weight: 100;
+}
+.card3:hover h3{
+    display: block;
+    font-family: "Impact";
+    color: white;
+    font-size: 4vw;
+    mix-blend-mode: difference;
+    font-weight: 100;
+}
+
+.card h3{
+    font-family: "Impact";
+    color: white;
+    font-size: 3vw;
+    font-weight: 100;
+}
+
+.card p{
+    font-family: Montreal;
+    margin-top: 4vh;
+}
+
+@media (max-width:500px){
+    .page-3-cards{
+        flex-direction: column;
+        margin-top: 3vh;
+    }
+    .card1, .card2, .card3{
+        width: 100%;
+    }
+    .card1:hover h3, .card2:hover h3, .card3:hover h3{
+        font-size: 10vw;
+        font-weight: 600;
+        font-family: "Impact";
+    }
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 5vh 1vh;
+}
+.contact-options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+.footer h4{
+    font-family: "Impact";
+    font-weight: 100;
+    font-size: 3vw;
+    letter-spacing: 5px;
+}
+.footer h5{
+    font-family: Montreal;
+    font-size: 1.2vw;
+
+}
+.footer h4, .footer h5{
+    color: white;
+}
+.social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    justify-content: center;
+    align-items: center;
+}
+.social-links a{
+    text-decoration: none;
+    font-size: 3vw;
+    color: white;
+}
+.social-links a:hover{
+    scale: 1.5;
+}
+.primary, .secondary{
+    display: flex;
+    gap: 5vw;
+}
+@media (max-width:500px){
+    .footer h4{
+        font-family: "Impact";
+        font-weight: 100;
+        font-size: 5vw;
+        letter-spacing: 5px;
+    }
+    .footer h5{
+        font-family: Montreal;
+        font-size: 3vw;
+    }
+}
